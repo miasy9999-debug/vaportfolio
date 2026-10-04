@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mia | Creative Virtual Assistant &amp; Designer</title>
+<meta name="description" content="Blessie Mae Comia (Mia) is a virtual assistant and graphic designer helping entrepreneurs and growing brands stay consistent, visible and stress-free.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;1,300;1,400;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#4d2f35;--mauve:#8a5a5c;--blush:#d9a79c;--pink:#f3c9c0;--cream:#fbefe9;--ink:#3b2428;
+--serif:"Inria Serif",Georgia,serif;--sans:"Poppins",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:4rem}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.15}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem}
+h2 em,h1 em{font-style:italic;font-weight:700}
+section{padding:clamp(3.5rem,8vw,6rem) 1.5rem}
+.wrap{max-width:1040px;margin:0 auto}
+.center{text-align:center}.center p{margin-inline:auto}
+p{max-width:64ch}
+.sky{color:var(--cream);background:
+ radial-gradient(1.5px 1.5px at 12% 18%,#fff9,transparent),radial-gradient(1.5px 1.5px at 78% 12%,#fff9,transparent),
+ radial-gradient(2px 2px at 40% 32%,#fff8,transparent),radial-gradient(1.5px 1.5px at 90% 40%,#fff9,transparent),
+ radial-gradient(1.5px 1.5px at 22% 62%,#fff8,transparent),radial-gradient(2px 2px at 66% 70%,#fff8,transparent),
+ linear-gradient(180deg,#2a1c24 0%,var(--mauve) 55%,var(--blush) 100%)}
+.sky2{background-color:var(--plum);background-image:linear-gradient(180deg,var(--plum),var(--mauve));color:var(--cream)}
+.btn{display:inline-block;margin-top:1.6rem;padding:.7rem 1.8rem;border-radius:999px;background:var(--pink);color:var(--plum);text-decoration:none;font-weight:500;letter-spacing:.06em;font-size:.85rem;text-transform:uppercase}
+.btn:hover{background:#fff}
+.btn.ghost{background:none;color:var(--cream);border:1px solid var(--cream);margin-top:1rem}
+.btn.ghost:hover{background:var(--cream);color:var(--plum)}
+
+nav{position:sticky;top:0;z-index:10;background:#2a1c24ee;backdrop-filter:blur(6px);padding:.9rem 1.5rem}
+nav ul{list-style:none;padding:0;display:flex;justify-content:center;gap:clamp(1rem,4vw,3rem)}
+nav a{color:var(--cream);text-decoration:none;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}
+nav a:hover{color:var(--pink)}
+
+.hero{padding-block:clamp(5rem,14vw,9rem) clamp(6rem,16vw,11rem)}
+.tag{display:inline-block;border:1px solid var(--cream);border-radius:999px;padding:.25rem 1.2rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.8rem,8vw,5.5rem);font-weight:300;text-shadow:0 0 30px #ffd9d055}
+.hero p{margin:1.5rem auto 0;opacity:.92}
+
+.about .wrap{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start}
+.polaroid{background:#f5f1ec;padding:.7rem .7rem 3.5rem;border-radius:3px;box-shadow:0 10px 30px #0004;transform:rotate(-2deg)}
+.polaroid img{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 30%;background:#000}
+.who{margin-top:1.5rem;font-family:var(--serif);font-size:1.9rem;line-height:1.1}
+.who small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-top:.5rem}
+.about h2{margin-bottom:.5rem}
+.about .hi{font-weight:500;margin-bottom:1rem}
+.about p+p{margin-top:1rem}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2rem;font-size:.9rem}
+.contact-grid h3{font-family:var(--sans);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:.4rem}
+.contact-grid ul{list-style:none;padding:0}
+
+.resume{background:var(--cream);color:var(--ink)}
+.resume .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.resume h3{font-family:var(--sans);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--mauve);margin:0 0 .8rem}
+.resume h3:not(:first-child){margin-top:2rem}
+.job{margin-bottom:1.1rem}.job b{font-weight:500;display:block}.job span{color:var(--mauve);font-size:.92rem}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{border:1px solid var(--blush);border-radius:999px;padding:.15rem .9rem;font-size:.85rem;color:var(--mauve)}
+.lang{list-style:none;padding:0}.lang b{font-weight:600;display:inline-block;min-width:5.5rem}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:2.5rem;text-align:left}
+.cards article{border:1px solid #fbefe966;border-radius:28px;padding:1.6rem;background:linear-gradient(180deg,#4d2f35cc,#fbefe91a)}
+.cards h3{font-size:1.6rem;margin-bottom:.8rem}
+.cards ul{padding-left:1.1rem;font-size:.9rem}.cards li{margin-bottom:.4rem}
+
+.works{background:linear-gradient(180deg,var(--plum),#2a1c24);color:var(--cream)}
+.filters{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1.5rem 0 2.5rem}
+.filters a{display:block;padding:.35rem 1.3rem;border-radius:999px;background:var(--pink);color:var(--plum);text-decoration:none;font-size:.9rem}
+.filters a:hover{background:#fff}
+.band{display:block;width:100%;max-width:1300px;margin:0 auto 2rem;padding:0;border:0;background:none;cursor:zoom-in;border-radius:14px;overflow:hidden}
+.band img{display:block;width:100%;height:auto}
+.sr{position:absolute;left:-9999px}
+dialog{border:0;background:none;max-width:96vw;max-height:96vh;padding:0}
+dialog::backdrop{background:#000d}
+dialog img{max-width:96vw;max-height:92vh;display:block;margin:auto;border-radius:8px}
+dialog button{position:fixed;top:1rem;right:1rem;border:0;background:var(--pink);color:var(--plum);border-radius:999px;padding:.5rem 1.2rem;font:500 .9rem var(--sans);cursor:pointer}
+
+.tools{background:var(--cream)}.tools h2{color:var(--mauve);font-style:italic}
+.tools ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:2rem}
+.tools li{background:#fff;border:1px solid var(--pink);border-radius:999px;padding:.4rem 1.2rem;font-weight:400}
+
+.cta h2{font-size:clamp(2.2rem,6vw,4rem)}
+.cta .eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;margin-bottom:1rem}
+.cta .contact-grid{max-width:520px;margin-inline:auto;text-align:left}
+footer{background:#2a1c24;color:var(--cream);text-align:center;padding:1.5rem;font-size:.85rem}
+
+@media(max-width:760px){.about .wrap,.resume .wrap{grid-template-columns:1fr}.polaroid{max-width:280px;margin-inline:auto}.who{text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main"><ul>
+  <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#works">Works</a></li>
+</ul></nav>
+
+<header class="sky hero center" id="home"><div class="wrap">
+  <span class="tag">Creative virtual assistant &amp; designer</span>
+  <h1>Where creativity<br><em>meets the cosmos.</em></h1>
+  <p>I help entrepreneurs and growing brands stay consistent, visible, and stress-free through thoughtful design and seamless virtual support — so you can focus on what matters most.</p>
+  <a class="btn" href="#contact">Work with me</a>
+</div></header>
+
+<section class="sky2 about" id="about"><div class="wrap">
+  <div>
+    <div class="polaroid"><img src="images/mia.jpg" alt="Portrait of Mia" width="384" height="512"></div>
+    <div class="who">Blessie Mae Comia<small>Virtual Assistant</small></div>
+    <a class="btn ghost" href="https://drive.google.com/file/d/1fLJ8DEvHEyL_uCSqak-9Dr1Etiv7BcOs/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+  </div>
+  <div>
+    <h2>The <em>mind</em> behind the work</h2>
+    <p class="hi">hello! im blessie comia, but call me mia ^^</p>
+    <p>a Virtual Assistant and Graphic Designer with a growing passion for marketing and creative strategy. Over time, I’ve discovered how powerful it is to combine design, organization, and marketing to help businesses not just look good, but grow with intention. I enjoy creating work that feels clean, aesthetic, and purposeful—something that truly connects with people.</p>
+    <p>I’ve always been drawn to visuals and creativity. I love soft, feminine aesthetics, especially anything in pink, and I enjoy turning ideas into designs that feel both beautiful and effective. Outside of work, music is a big part of who I am. I sing and write songs in my free time, which allows me to express creativity in a different way. I’m also currently learning Spanish—I'm in love with the language and the culture behind it.</p>
+    <p>My goal is to build a career that allows me to work while traveling, helping businesses from anywhere in the world while continuously growing both creatively and professionally.</p>
+    <div class="contact-grid">
+      <div><h3>Contact</h3><ul>
+        <li><a href="tel:+639453728446">+63 945 372 8446</a></li>
+        <li><a href="mailto:miasy0418@gmail.com">miasy0418@gmail.com</a></li>
+        <li>Bicol, Philippines</li></ul></div>
+      <div><h3>Profiles</h3><ul>
+        <li><a href="https://www.linkedin.com/in/comiablessie" target="_blank" rel="noopener">linkedin/comiablessie</a></li>
+        <li><a href="https://www.facebook.com/iammiab" target="_blank" rel="noopener">facebook/iammiab</a></li>
+        <li><a href="https://t.me/elwsiv" target="_blank" rel="noopener">t.me/elwsiv</a></li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="resume" aria-label="Experience and skills"><div class="wrap">
+  <div>
+    <h3>Experience</h3>
+    <div class="job"><b>Freelance Graphic Designer | Remote | 2025 – Present</b><span>Design social media graphics, branding visuals, and promotional materials aligned with client goals using Canva.</span></div>
+    <div class="job"><b>Amazon Product Researcher (Part-Time, Contractual) | Remote | 2025</b><span>Conduct product research, analyze profitability, and organize findings to support e-commerce decisions.</span></div>
+    <div class="job"><b>Virtual Assistant (Part-Time) | Remote | 2024</b><span>Provide administrative support including data entry, web research, and task management for smooth business operations.</span></div>
+    <div class="job"><b>Retail Operations Assistant | Bicol | 2018 – 2025</b><span>Managed sales, inventory, and customer service to ensure organized and efficient store operations.</span></div>
+    <h3>Education</h3>
+    <div class="job"><b>2019–2021 · Bachelor of Science in Nursing</b><span>Unibersidad de Sta. Isabel</span></div>
+  </div>
+  <div>
+    <h3>Language</h3>
+    <ul class="lang"><li><b>Filipino</b> Native</li><li><b>English</b> Proficient (EF Standard English Test)</li><li><b>Spanish</b> Basic (still learning)</li></ul>
+    <h3>Work skills</h3>
+    <ul class="chips"><li>Virtual Assistance</li><li>Microsoft Office</li><li>Graphic Design</li><li>Logo Creation</li><li>Branding and Visual Identity</li><li>Web Design</li><li>Sales</li><li>Customer Service</li></ul>
+    <h3>Soft skills</h3>
+    <ul class="chips"><li>Detail-Oriented</li><li>Organized</li><li>Time Management</li><li>Multitasking</li><li>Communication</li><li>Adaptability</li><li>Efficiency</li><li>Reliability</li><li>Problem-Solving</li><li>Analytical</li><li>Initiative</li></ul>
+  </div>
+</div></section>
+
+<section class="sky center" id="services"><div class="wrap">
+  <h2><em>What I offer</em></h2>
+  <p>A dual offering of creative design and operational support — everything your brand needs to thrive.</p>
+  <div class="cards">
+    <article><h3>Virtual Assistance</h3><ul><li>Email &amp; Inbox Management</li><li>Calendar &amp; Schedule Management</li><li>Data Entry &amp; Web Research</li><li>Customer Support</li><li>Administrative Support</li></ul></article>
+    <article><h3>Graphic Design</h3><ul><li>Social Media Graphics (Instagram, TikTok, Facebook)</li><li>Branding &amp; Visual Identity (Logos, Color Palettes, Templates)</li><li>Marketing Collateral (Flyers, Posters, Ads)</li><li>Canva Templates (Editable &amp; Branded)</li></ul></article>
+    <article><h3>Ecommerce Support</h3><ul><li>Amazon &amp; Shopify Product Research</li><li>Product Listing &amp; Optimization</li><li>Inventory &amp; Order Management</li><li>Basic Shopify Store Setup</li></ul></article>
+    <article><h3>Content &amp; Marketing</h3><ul><li>Social Media Planning &amp; Scheduling</li><li>Email Marketing &amp; Newsletter Design</li><li>Basic Copywriting &amp; Caption Writing</li></ul></article>
+  </div>
+</div></section>
+
+<section class="works" id="works"><div class="wrap center">
+  <h2>A showcase of <em>craft &amp; creativity</em></h2>
+  <p>Every piece tells a story. Browse my work across design, branding, social media, and beyond.</p>
+  <ul class="filters">
+    <li><a href="#w-va">Virtual Assistance</a></li><li><a href="#w-logos">Logos</a></li><li><a href="#w-social">Social Media</a></li><li><a href="#w-posters">Posters</a></li>
+    <li><a href="#w-funnels">Funnels</a></li><li><a href="#w-branding">Branding</a></li><li><a href="#w-banners">Banners &amp; Amazon A+</a></li><li><a href="#w-podcast">Podcast covers</a></li>
+  </ul>
+</div>
+<div class="wrap" style="max-width:1300px">
+  <button class="band" id="w-va"><img loading="lazy" src="images/va-samples.jpg" alt="Virtual assistant samples: data entry (500+ entries), calendar management (30+ weekly schedules), lead generation (200+ leads), processing orders (50+), social media management (20+ post calendar), Amazon product research (30+ listings) and travel coordination."></button>
+  <button class="band" id="w-logos"><img loading="lazy" src="images/logofolio.jpg" alt="Logofolio: 15+ conceptual brand identities including Scoopie, Mayan, Petalique, Flourish, Mireya, Musemode, Serene, Elle Brows, Inkspire, Latte Lane, Coffeeline and Rowan."></button>
+  <button class="band" id="w-social"><img loading="lazy" src="images/social-media.jpg" alt="Social media campaign graphics across floral, bakery, skincare, pet, travel and flooring brands."></button>
+  <button class="band"><img loading="lazy" src="images/instagram-feed.jpg" alt="Instagram feed layouts for four client profiles."></button>
+  <button class="band" id="w-posters"><img loading="lazy" src="images/posters.jpg" alt="Posters and outdoor advertisements shown in mockups."></button>
+  <button class="band" id="w-banners"><img loading="lazy" src="images/banners-amazon.jpg" alt="Large-format banners and Amazon A+ content layouts."></button>
+  <button class="band" id="w-funnels"><img loading="lazy" src="images/funnels-cards.jpg" alt="Landing pages and sales funnels, plus business card designs."></button>
+  <button class="band" id="w-branding"><img loading="lazy" src="images/branding-kits.jpg" alt="Branding kits with typography, color palettes and mood boards."></button>
+  <button class="band" id="w-podcast"><img loading="lazy" src="images/podcast-covers.jpg" alt="Podcast cover art and episode thumbnails for Built by HER, Paws &amp; Profits and Small Anchors."></button>
+</div></section>
+
+<section class="tools center"><div class="wrap">
+  <h2>tools i use</h2>
+  <p>Mastering the industry-leading platforms that keep your business organized, efficient, and growing.</p>
+  <ul>
+    <li>Google Workspace</li><li>Microsoft Office</li><li>Slack</li><li>Trello</li><li>Asana</li><li>Monday.com</li><li>Notion</li><li>Zoom</li><li>Skype</li><li>WhatsApp</li><li>Calendly</li><li>Shopify</li><li>Canva</li><li>Adobe</li><li>Figma</li><li>CapCut</li><li>Helium 10</li><li>Jungle Scout</li><li>Wix</li><li>Squarespace</li><li>WordPress</li>
+  </ul>
+</div></section>
+
+<section class="sky center cta" id="contact"><div class="wrap">
+  <p class="eyebrow">Ready when you are</p>
+  <h2>Let's build something <em>meaningful</em> together</h2>
+  <p>Open to new collaborations, ongoing retainers, and one-time projects. Let's create something your audience will love.</p>
+  <a class="btn" href="mailto:miasy0418@gmail.com">Get in touch</a>
+  <div class="contact-grid">
+    <div><h3>Contact</h3><ul><li><a href="tel:+639453728446">+63 945 372 8446</a></li><li><a href="mailto:miasy0418@gmail.com">miasy0418@gmail.com</a></li><li>Bicol, Philippines</li></ul></div>
+    <div><h3>Profiles</h3><ul><li><a href="https://www.linkedin.com/in/comiablessie" target="_blank" rel="noopener">linkedin/comiablessie</a></li><li><a href="https://www.facebook.com/iammiab" target="_blank" rel="noopener">facebook/iammiab</a></li><li><a href="https://t.me/elwsiv" target="_blank" rel="noopener">t.me/elwsiv</a></li></ul></div>
+  </div>
+</div></section>
+
+<footer>&copy; 2026 Blessie Mae Comia. All rights reserved.</footer>
+
+<dialog id="lb"><button type="button" id="x">Close</button><img alt=""></dialog>
+<script>
+const lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('.band').forEach(b=>b.addEventListener('click',()=>{const s=b.querySelector('img');im.src=s.src;im.alt=s.alt;lb.showModal()}));
+document.getElementById('x').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb||e.target===im)lb.close()});
+</script>
+</body>
+</html>
